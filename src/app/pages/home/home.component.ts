@@ -1,9 +1,10 @@
 import { Component } from "@angular/core";
+import { HomeHeaderComponent } from "@comp/home-header/home-header.component";
 
 @Component({
     selector: "qt-home",
-    imports: [],
-    template: ` <p>home works!</p> `,
+    imports: [HomeHeaderComponent],
+    templateUrl: "./home.component.html",
     styles: ``,
 })
 export class HomeComponent {}
