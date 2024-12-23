@@ -1,0 +1,32 @@
+{
+    "icon": {
+        "desktop": {
+            "regularIconTransformation": {
+                "type": "none"
+            },
+            "darkIconType": "none"
+        },
+        "touch": {
+            "transformation": {
+                "type": "background",
+                "backgroundColor": "#120E22",
+                "backgroundRadius": 0,
+                "imageScale": 0.7
+            },
+            "appTitle": "QuikTriv"
+        },
+        "webAppManifest": {
+            "transformation": {
+                "type": "background",
+                "backgroundColor": "#120E22",
+                "backgroundRadius": 0,
+                "imageScale": 0.6
+            },
+            "backgroundColor": "#120E22",
+            "name": "QuikTriv Trivia Maker",
+            "shortName": "QuikTriv",
+            "themeColor": "#DE1957"
+        }
+    },
+    "path": "/"
+}
