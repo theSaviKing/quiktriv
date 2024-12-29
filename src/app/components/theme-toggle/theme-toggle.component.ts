@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ThemeService } from "@serv/theme.service";
+import { ThemeService } from "@app/services/theme/theme.service";
 import { LucideAngularModule, Monitor, Sun, Moon } from "lucide-angular";
 
 type Theme = "system" | "dark" | "light";
@@ -12,19 +12,23 @@ type Theme = "system" | "dark" | "light";
         <div
             tabindex="0"
             role="button"
-            class="btn bg-base-100 hover:bg-base-200"
+            class="btn btn-square no-animation bg-base-100 hover:bg-base-200"
         >
-            @switch (theme) { @case ('system') {
-            <lucide-angular [img]="MonitorIcon" />
-            } @case ('light') {
-            <lucide-angular [img]="SunIcon" />
-            } @case ('dark') {
-            <lucide-angular [img]="MoonIcon" />
-            } }
+            @switch (theme) {
+                @case ("system") {
+                    <lucide-angular class="h-5" [img]="MonitorIcon" />
+                }
+                @case ("light") {
+                    <lucide-angular class="h-5" [img]="SunIcon" />
+                }
+                @case ("dark") {
+                    <lucide-angular class="h-5" [img]="MoonIcon" />
+                }
+            }
         </div>
         <ul
             tabindex="0"
-            class="menu dropdown-content mt-2 rounded-box z-10 p-2 shadow bg-base-200"
+            class="menu dropdown-content z-10 mt-2 rounded-box bg-base-200 p-2 shadow"
         >
             <li><a (click)="toggleTheme('light')"> Light </a></li>
             <li><a (click)="toggleTheme('dark')">Dark</a></li>

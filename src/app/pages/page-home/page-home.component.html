@@ -1,0 +1,45 @@
+<div class="m-8">
+    <header
+        class="navbar mx-auto w-4/5 rounded-box bg-base-300 px-16 py-4"
+        [style.viewTransitionName]="'qt-header'"
+    >
+        <div class="navbar-start">
+            <img
+                src="/favicon/favicon.svg"
+                class="h-10"
+                [style.viewTransitionName]="'qt-icon'"
+            />
+        </div>
+        <div class="navbar-center">
+            <p
+                class="font-display text-4xl font-black"
+                [style.viewTransitionName]="'qt-wordmark'"
+            >
+                QUIKTRIV
+            </p>
+        </div>
+        <div class="navbar-end">
+            <qt-theme-toggle />
+        </div>
+    </header>
+
+    <div class="flex flex-col items-center justify-center gap-4 py-40">
+        <qt-home-heading />
+        <p class="text-center text-lg font-medium">
+            Easily make fun, engaging, and competitive trivia games and quizzes
+            to share with anyone!
+        </p>
+        <div class="flex gap-4">
+            <a class="btn btn-primary" routerLink="/app/quizzes">
+                Get started with
+                <span class="-ml-1 font-display font-black">QUIKTRIV!</span>
+            </a>
+            <a class="btn btn-outline btn-secondary"
+                >Learn more
+                <lucide-angular [img]="ArrowRight" class="h-5"></lucide-angular>
+            </a>
+        </div>
+        <hr class="mx-auto my-20 h-px w-3/4 border-neutral" />
+        <qt-home-features />
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<header class="navbar bg-base-300 p-6" [style.viewTransitionName]="'qt-header'">
+    <div class="navbar-start">
+        <a
+            routerLink="/"
+            class="relative flex gap-4 transition-all before:absolute before:bottom-0 before:left-0 before:z-10 before:mx-auto before:block before:h-px before:w-full before:bg-primary/0 before:transition-all before:content-[''] hover:pb-2 hover:before:bg-primary/50"
+        >
+            <img src="/favicon/favicon.svg" alt="QuikTriv Logo" class="h-8" />
+            <p class="font-display text-3xl font-black">QUIKTRIV</p>
+        </a>
+    </div>
+    <div class="navbar-center"></div>
+    <div class="navbar-end flex items-center gap-4">
+        <div *ngIf="isAuthenticated">
+            <qt-user-button />
+        </div>
+        <div *ngIf="!isAuthenticated">
+            <qt-login />
+        </div>
+        <qt-theme-toggle />
+    </div>
+</header>
+<main class="h-full w-full p-4">
+    <router-outlet />
+</main>

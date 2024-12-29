@@ -22,7 +22,7 @@ export class ThemeService {
                         window.matchMedia("(prefers-color-scheme: dark)")
                             .matches)
                     ? "dark"
-                    : "light"
+                    : "light",
             );
         } else {
             document.documentElement.setAttribute("data-theme", this.theme);

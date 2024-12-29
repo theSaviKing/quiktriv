@@ -4,3 +4,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .gradient,
+    .gradient-r {
+        @apply bg-gradient-to-r from-primary via-secondary to-accent;
+    }
+    .gradient-br {
+        @apply bg-gradient-to-br from-primary via-secondary to-accent;
+    }
+
+    .gradient-b {
+        @apply bg-gradient-to-b from-primary via-secondary to-accent;
+    }
+
+    .gradient-bl {
+        @apply bg-gradient-to-bl from-primary via-secondary to-accent;
+    }
+
+    .gradient-l {
+        @apply bg-gradient-to-l from-primary via-secondary to-accent;
+    }
+
+    .gradient-tl {
+        @apply bg-gradient-to-tl from-primary via-secondary to-accent;
+    }
+
+    .gradient-t {
+        @apply bg-gradient-to-t from-primary via-secondary to-accent;
+    }
+
+    .gradient-tr {
+        @apply bg-gradient-to-tr from-primary via-secondary to-accent;
+    }
+}

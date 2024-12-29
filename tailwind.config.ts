@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import daisyui, { type Config as DaisyUIConfig } from "daisyui";
+import { sunset } from "daisyui/src/theming/themes";
 import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
@@ -17,7 +18,7 @@ export default {
         themes: [
             {
                 light: {
-                    ...require("daisyui/src/theming/themes")["sunset"], // Start with the "sunset" theme
+                    ...sunset, // Start with the "sunset" theme
                     "color-scheme": "light",
                     neutral: "oklch(92% 0.019 237.69)",
                     "neutral-content": "oklch(20% 0.019 237.69)",
@@ -35,9 +36,18 @@ export default {
                     "--tab-radius": "0.25rem",
                 },
             },
-            "sunset",
+            {
+                dark: {
+                    ...sunset,
+                    "--rounded-box": "0.5rem",
+                    "--rounded-btn": "0.25rem",
+                    "--rounded-badge": "0.95rem",
+                    "--tab-radius": "0.25rem",
+                },
+            },
         ],
         darkTheme: "sunset",
+        logs: false,
     } satisfies DaisyUIConfig,
     darkMode: "selector",
 } satisfies Config;
